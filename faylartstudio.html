@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>Faylart Studio</title>
+    <link rel="stylesheet" type="text/css" href="faylartstudio.css">
+</head>
+<body>
+    <header >
+        <a href="#" class="logo">Faylart Studio</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="https://www.artstation.com/brendafailache">Illustration</a></li>
+            <li><a href="https://soundcloud.com/pietrofailache">Music</a></li>
+            
+        
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars">
+        <img src="img/moon.png" id="moon">
+        <img src="img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Faylart Studio</h2>
+        <a href="#sec" id="btn">About us</a>
+        <img src="img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About</h2>
+        <p>Faylart Studio is a dynamic 2D animation studio and music production company that specializes in creating captivating visuals and soundtracks for games.
+
+            Faylart Studio was founded with the goal of bringing unique and imaginative content to the gaming industry. With a team of experienced artists and musicians, the studio creates stunning 2D animations and immersive soundscapes that elevate the gaming experience.
+            
+            At Faylart Studio, we understand the importance of storytelling in gaming. That's why we work closely with our clients to create engaging narratives that are brought to life through our exceptional animation and music production services. Our team is dedicated to delivering high-quality work that captures the essence of each game and draws players into its world.
+            
+            Our animation services cover a wide range of styles, including hand-drawn, vector-based, and pixel art. We work with clients to develop custom character designs, backgrounds, and visual effects that seamlessly integrate into the game's overall aesthetic. Our team is skilled at creating animations that are fluid, expressive, and full of personality.
+            
+            In addition to animation, our studio also provides music production services. Our composers and sound designers work tirelessly to create soundtracks that enhance the mood and atmosphere of each game. From catchy and upbeat tunes to haunting and eerie melodies, our team can create music that perfectly matches the game's tone and setting.
+            
+            At Faylart Studio, we take pride in our attention to detail and our commitment to delivering exceptional work. We understand that each game is unique, and we strive to create content that is tailor-made to meet the needs of our clients. We believe that our passion for gaming and our dedication to our craft make us the ideal partner for any game development project.
+            
+            In conclusion, Faylart Studio is a 2D animation and music production studio that is dedicated to bringing your game to life. Our team of talented artists and musicians is passionate about creating unique and engaging content that captures the spirit of each game. If you're looking for a partner who will go above and beyond to help your game succeed, look no further than Faylart Studio.
+            <br><br></p>
+    </div>
+    <div class="sec" id="sec">
+        <h2>Contact</h2>
+        <p>faylartstudio@gmail.com</p>
+        
+
+    </div>
+  
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.05 + 'px';
+            mountains_behind.style.top = value*0.5 + 'px';
+            mountains_front.style.top = value*0 + 'px';
+            text.style.marginRight = value*4 + 'px';
+            text.style.marginTop = value*1.5 + 'px';
+            btn.style.marginTop = value*1.5 + 'px';
+            header.style.top = value *0.5 + 'px';
+            
+        })
+    
+    </script>
+        
+    
+</body>
